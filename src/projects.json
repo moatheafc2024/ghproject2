@@ -1,0 +1,104 @@
+[
+    {
+        "title": "UrWatches",
+        "tags": "Website",
+        "url": "https://urwatches.com",
+        "image": "frontend/images/projects/urwatches.png"
+    },
+    {
+        "title": "Qt3aa",
+        "tags": "Website",
+        "url": "https://qt3aa.com",
+        "image": "frontend/images/projects/qt3aa.png"
+    },
+    {
+        "title": "Any Cards",
+        "tags": "Website,Mobile App",
+        "url": "https://any-cards.com",
+        "image": "frontend/images/projects/anycards.png"
+    },
+    {
+        "title": "511 Cards",
+        "tags": "Website,Mobile App",
+        "url": "https://511cards.com/",
+        "image": "frontend/images/projects/511.png"
+    },
+    {
+        "title": "Anfas",
+        "tags": "Website",
+        "url": "https://anfasllc.com",
+        "image": "frontend/images/projects/anfas.png"
+    },
+    {
+        "title": "Bayt Care",
+        "tags": "Mobile App",
+        "url": "https://baytcare.com",
+        "image": "frontend/images/projects/baytcare.png"
+    },
+    {
+        "title": "Next Lecture",
+        "tags": "Mobile App",
+        "url": "https://play.google.com/store/apps/details?id=com.next_lecture",
+        "image": "frontend/images/projects/next-lecture.png"
+    },
+    {
+        "title": "Carving",
+        "tags": "Website",
+        "url": "http://carving-jo.com/",
+        "image": "frontend/images/projects/carving.png"
+    },
+    {
+        "title": "Digital Brokers",
+        "tags": "Web App",
+        "url": "https://digitalbrokersre.com",
+        "image": "frontend/images/projects/digitalbroker.png"
+    },
+    {
+        "title": "Coodnji",
+        "tags": "Mobile App",
+        "url": "https://play.google.com/store/apps/details?id=com.algharabligroup.coodnji",
+        "image": "frontend/images/projects/coodnji.png"
+    },
+    {
+        "title": "Studbook",
+        "tags": "Web App",
+        "url": "https://studbook.info",
+        "image": "frontend/images/projects/studbook.png"
+    },
+    {
+        "title": "Warsha",
+        "tags": "Web App",
+        "url": "https://warsha.co.il",
+        "image": "frontend/images/projects/warsha.png"
+    },
+    {
+        "title": "Yathreb Group",
+        "tags": "Website",
+        "url": "https://yathrebgroup.com",
+        "image": "frontend/images/projects/yathreb.png"
+    },
+    {
+        "title": "Sky Global",
+        "tags": "Website",
+        "url": "https://skyglobal.sa",
+        "image": "frontend/images/projects/sky.png"
+    },
+    {
+        "title": "Shoring System",
+        "tags": "Website",
+        "url": "https://shoringsystem-co.com",
+        "image": "frontend/images/projects/shoring.png"
+    },
+    {
+        "title": "Arab Bridge",
+        "tags": "Website",
+        "url": "https://arabbridge-eng.com",
+        "image": "frontend/images/projects/arabbridge.png"
+    },
+    {
+        "title": "Clean IMEI",
+        "tags": "Website",
+        "url": "https://check.cleanimei.com",
+        "image": "frontend/images/projects/clean-imei.png"
+    }
+]
