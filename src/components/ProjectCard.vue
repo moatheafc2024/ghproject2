@@ -54,13 +54,17 @@
             {{ project.title }}
           </h3>
 
-          <div class="flex flex-wrap justify-center gap-2">
+          <div class="flex flex-wrap justify-center gap-3">
             <span
               v-for="cat in project.categories"
               :key="cat"
-              class="px-4 py-1.5 bg-gradient-to-r from-cyan-100 to-primary-100 text-cyan-700 text-xs font-bold rounded-full border border-cyan-300/60 group-hover:from-cyan-200 group-hover:to-primary-200 group-hover:border-cyan-400 group-hover:shadow-md transition-all duration-300"
+              class="relative px-5 py-2 bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900 text-white text-xs font-semibold rounded-lg shadow-md backdrop-blur-sm overflow-hidden transition-all duration-300 group/tag"
             >
-              {{ cat }}
+              <span class="relative z-10 tracking-wide">{{ cat }}</span>
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-primary-500/20 to-transparent opacity-0 group-hover/tag:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 opacity-0 group-hover/tag:opacity-100 transition-opacity duration-300">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+              </div>
             </span>
           </div>
         </div>
@@ -145,5 +149,18 @@ defineProps<{
 
 .group:hover .wave-svg {
   opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
 }
 </style>
