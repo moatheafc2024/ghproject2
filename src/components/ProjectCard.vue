@@ -54,7 +54,7 @@
             {{ project.title }}
           </h3>
 
-          <div class="flex flex-wrap justify-center gap-3">
+          <div class="flex flex-nowrap justify-center gap-3">
             <span
               v-for="cat in project.categories"
               :key="cat"
