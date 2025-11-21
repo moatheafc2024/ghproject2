@@ -10,6 +10,21 @@
     >
       <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-primary-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
+      <svg class="absolute bottom-0 left-0 w-full h-24 wave-svg" preserveAspectRatio="none" viewBox="0 0 1440 120">
+        <path
+          class="wave-path"
+          d="M0,60 C240,90 480,30 720,60 C960,90 1200,30 1440,60 L1440,120 L0,120 Z"
+          fill="url(#waveGradient)"
+        />
+        <defs>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.15" />
+            <stop offset="50%" style="stop-color:#0891b2;stop-opacity:0.25" />
+            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.15" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <div class="relative p-6 sm:p-8 md:p-10">
         <div class="relative mb-6 aspect-square w-full max-w-[280px] mx-auto flex items-center justify-center">
           <div class="absolute inset-0 bg-gradient-to-br from-primary-100/50 to-cyan-100/50 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"></div>
@@ -58,3 +73,48 @@ defineProps<{
   project: Project;
 }>();
 </script>
+
+<style scoped>
+.wave-svg {
+  transition: all 0.3s ease;
+}
+
+.group:hover .wave-svg {
+  animation: waveMotion 3s ease-in-out infinite;
+}
+
+@keyframes waveMotion {
+  0%, 100% {
+    transform: translateX(0) scale(1, 1);
+  }
+  25% {
+    transform: translateX(-2%) scale(1.02, 0.95);
+  }
+  50% {
+    transform: translateX(0) scale(1, 1.05);
+  }
+  75% {
+    transform: translateX(2%) scale(0.98, 1);
+  }
+}
+
+.wave-path {
+  transition: all 0.5s ease;
+}
+
+.group:hover .wave-path {
+  fill: url(#waveGradientHover);
+}
+
+.group:hover svg defs linearGradient stop:nth-child(1) {
+  stop-opacity: 0.25;
+}
+
+.group:hover svg defs linearGradient stop:nth-child(2) {
+  stop-opacity: 0.4;
+}
+
+.group:hover svg defs linearGradient stop:nth-child(3) {
+  stop-opacity: 0.25;
+}
+</style>

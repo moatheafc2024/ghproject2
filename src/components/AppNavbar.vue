@@ -2,18 +2,19 @@
   <nav
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      scrolled ? 'glass shadow-glow' : 'bg-transparent'
+      scrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-100' : 'bg-transparent'
     ]"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-24">
         <router-link to="/" class="flex items-center space-x-3 group">
           <div :class="[
-            'relative rounded-xl p-2 transition-all duration-300',
-            scrolled ? 'bg-transparent shadow-none' : 'bg-white/90 backdrop-blur-sm shadow-lg'
+            'relative rounded-2xl p-3 transition-all duration-300',
+            scrolled ? 'bg-gradient-to-br from-primary-50 to-cyan-50 shadow-md' : 'bg-white/95 backdrop-blur-sm shadow-xl'
           ]">
-            <img src="/logo (3).png" alt="Al Gharabli Group" class="h-12 md:h-16 w-auto transition-all duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-primary-500/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow"></div>
+            <img src="/logo (3).png" alt="Al Gharabli Group" class="h-14 md:h-18 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3" />
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-cyan-400/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 border-2 border-transparent group-hover:border-primary-200 rounded-2xl transition-all duration-300"></div>
           </div>
         </router-link>
 
