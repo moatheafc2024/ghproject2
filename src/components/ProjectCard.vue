@@ -8,21 +8,31 @@
     <div
       class="relative h-full bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02]"
     >
-      <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/50 via-white to-primary-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-      <svg class="absolute bottom-0 left-0 w-full h-24 wave-svg" preserveAspectRatio="none" viewBox="0 0 1440 120">
-        <path
-          class="wave-path"
-          d="M0,60 C240,90 480,30 720,60 C960,90 1200,30 1440,60 L1440,120 L0,120 Z"
-          fill="url(#waveGradient)"
-        />
+      <svg class="absolute top-0 left-0 w-full h-[60%] wave-svg" preserveAspectRatio="none" viewBox="0 0 1440 600">
         <defs>
-          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.15" />
-            <stop offset="50%" style="stop-color:#0891b2;stop-opacity:0.25" />
-            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.15" />
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#0891b2;stop-opacity:0.4" />
+            <stop offset="40%" style="stop-color:#06b6d4;stop-opacity:0.25" />
+            <stop offset="100%" style="stop-color:#67e8f9;stop-opacity:0.08" />
           </linearGradient>
         </defs>
+        <path
+          class="wave-path-1"
+          d="M0,320 C320,280 640,360 960,320 C1280,280 1440,320 1440,320 L1440,0 L0,0 Z"
+          fill="url(#waveGradient)"
+        />
+        <path
+          class="wave-path-2"
+          d="M0,280 C360,320 720,240 1080,280 C1320,300 1440,260 1440,260 L1440,0 L0,0 Z"
+          fill="url(#waveGradient)"
+          opacity="0.6"
+        />
+        <path
+          class="wave-path-3"
+          d="M0,240 C280,280 560,200 840,240 C1120,280 1440,220 1440,220 L1440,0 L0,0 Z"
+          fill="url(#waveGradient)"
+          opacity="0.4"
+        />
       </svg>
 
       <div class="relative p-6 sm:p-8 md:p-10">
@@ -76,45 +86,64 @@ defineProps<{
 
 <style scoped>
 .wave-svg {
-  transition: all 0.3s ease;
+  transition: opacity 0.5s ease;
+}
+
+.wave-path-1 {
+  transition: all 0.8s ease;
+}
+
+.wave-path-2 {
+  transition: all 0.8s ease;
+}
+
+.wave-path-3 {
+  transition: all 0.8s ease;
+}
+
+.group:hover .wave-path-1 {
+  animation: waveFlow1 4s ease-in-out infinite;
+  opacity: 1;
+}
+
+.group:hover .wave-path-2 {
+  animation: waveFlow2 5s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.group:hover .wave-path-3 {
+  animation: waveFlow3 6s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes waveFlow1 {
+  0%, 100% {
+    d: path("M0,320 C320,280 640,360 960,320 C1280,280 1440,320 1440,320 L1440,0 L0,0 Z");
+  }
+  50% {
+    d: path("M0,340 C320,300 640,380 960,340 C1280,300 1440,340 1440,340 L1440,0 L0,0 Z");
+  }
+}
+
+@keyframes waveFlow2 {
+  0%, 100% {
+    d: path("M0,280 C360,320 720,240 1080,280 C1320,300 1440,260 1440,260 L1440,0 L0,0 Z");
+  }
+  50% {
+    d: path("M0,300 C360,340 720,260 1080,300 C1320,320 1440,280 1440,280 L1440,0 L0,0 Z");
+  }
+}
+
+@keyframes waveFlow3 {
+  0%, 100% {
+    d: path("M0,240 C280,280 560,200 840,240 C1120,280 1440,220 1440,220 L1440,0 L0,0 Z");
+  }
+  50% {
+    d: path("M0,260 C280,300 560,220 840,260 C1120,300 1440,240 1440,240 L1440,0 L0,0 Z");
+  }
 }
 
 .group:hover .wave-svg {
-  animation: waveMotion 3s ease-in-out infinite;
-}
-
-@keyframes waveMotion {
-  0%, 100% {
-    transform: translateX(0) scale(1, 1);
-  }
-  25% {
-    transform: translateX(-2%) scale(1.02, 0.95);
-  }
-  50% {
-    transform: translateX(0) scale(1, 1.05);
-  }
-  75% {
-    transform: translateX(2%) scale(0.98, 1);
-  }
-}
-
-.wave-path {
-  transition: all 0.5s ease;
-}
-
-.group:hover .wave-path {
-  fill: url(#waveGradientHover);
-}
-
-.group:hover svg defs linearGradient stop:nth-child(1) {
-  stop-opacity: 0.25;
-}
-
-.group:hover svg defs linearGradient stop:nth-child(2) {
-  stop-opacity: 0.4;
-}
-
-.group:hover svg defs linearGradient stop:nth-child(3) {
-  stop-opacity: 0.25;
+  opacity: 1;
 }
 </style>

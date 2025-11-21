@@ -7,14 +7,17 @@
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-24">
-        <router-link to="/" class="flex items-center space-x-3 group">
+        <router-link to="/" class="flex items-center space-x-3 group relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary-400 via-cyan-400 to-primary-400 rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500 animate-pulse"></div>
           <div :class="[
-            'relative rounded-2xl p-3 transition-all duration-300',
-            scrolled ? 'bg-gradient-to-br from-primary-50 to-cyan-50 shadow-md' : 'bg-white/95 backdrop-blur-sm shadow-xl'
+            'relative overflow-hidden rounded-xl transition-all duration-500',
+            scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-md shadow-2xl'
           ]">
-            <img src="/logo (3).png" alt="Al Gharabli Group" class="h-14 md:h-18 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3" />
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-400/20 to-cyan-400/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 border-2 border-transparent group-hover:border-primary-200 rounded-2xl transition-all duration-300"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative p-2.5">
+              <img src="/logo (3).png" alt="Al Gharabli Group" class="h-12 md:h-14 w-auto transition-all duration-500 group-hover:scale-105" />
+            </div>
+            <div class="absolute inset-0 border border-primary-200/0 group-hover:border-primary-300/50 rounded-xl transition-all duration-500"></div>
           </div>
         </router-link>
 
